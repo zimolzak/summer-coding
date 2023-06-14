@@ -1,8 +1,52 @@
 % Summer Coding Club
-% June, 2023
+% June--July, 2023
 % Jenny Sloane, Israel Christie
+
+# Thoughts
+
+- ok to start slow
+- spidey sense for errors
+- cowboy vs use a library
+- ok to have some manual steps
+- without loop
+- taste (code, viz)
+
+
+
 
 # Intro
 
 2023-06-14
 
+## General
+
+## Posit
+
+## Rstudio
+
+## Resources
+
+
+
+
+# Variables
+
+# Packages and Functions
+
+# Intro Tidyverse
+
+July 12
+
+# Organize and Clean
+
+# Visualization
+
+July 26
+
+# TBD
+
+August 2
+
+# TBD
+
+August 9
