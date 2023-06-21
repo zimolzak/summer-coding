@@ -6,10 +6,13 @@
 
 - ok to start slow
 - spidey sense for errors
-- cowboy vs use a library
+- ok to web search for it
+- cowboy vs use a library (like lit review)
 - ok to have some manual steps
 - without loop
 - taste (code, viz)
+- separate content from form
+- change in one place, change everywhere auto
 
 
 
@@ -18,18 +21,41 @@
 
 2023-06-14
 
-## General
+$n = 25$ responses to poll. Percentages of experience: 38, 31, 15, 15.
+About 1/3 and 2/3 split between R experience and none. Impressions
+before we start: excited vs scared.
 
-## Posit
+Why? Efficient, free, larger data, reproducibility, fewer errors
+(manual entry), documents for others (like future you), nice reports,
+flexible changes to graphs, learn other languages, connect to other
+software, big community, packages.
 
-## Rstudio
+Packages even include: interactivity, web sites, cross-stitch, memes.
+Do Google it. Do need to know *how* to Google it.
 
-## Resources
+r4beginners.com/getting_started.html
+
+Plain old R versus RStudio.
 
 
 
 
 # Variables
+
+2023-06-21
+
+- working directory `getwd()`
+- make new Rmd script
+- comments using `#`
+
+Go to `lesson1-syntax.Rmd`.
+
+- rmarkdown sections
+- chunks and chunk options
+- operators
+
+
+
 
 # Packages and Functions
 
