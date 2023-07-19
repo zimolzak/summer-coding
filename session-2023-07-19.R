@@ -106,3 +106,11 @@ tbl_y <- tibble(
 bind_cols(tbl_x, tbl_y)  # ooh, probably not what you want
 bind_rows(tbl_x, tbl_y)
 
+# joins
+
+full_join(tbl_x, tbl_y)  # by default it looks for identical column names
+inner_join(tbl_x, tbl_y)  # now only 8 out of 12 rows
+left_join(tbl_x, tbl_y)  # 10 out of 12, as expected
+right_join(tbl_y, tbl_x)  # same result, different order of rows/cols
+
+# filtering joins.. check back later!
