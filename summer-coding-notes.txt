@@ -1,5 +1,5 @@
 % Summer Coding Club
-% June--July, 2023
+% June--August, 2023
 % Jenny Sloane, Israel Christie
 
 # Thoughts
@@ -13,7 +13,6 @@
 - taste (code, viz)
 - separate content from form
 - change in one place, change everywhere auto
-
 
 
 
@@ -39,7 +38,6 @@ Plain old R versus RStudio.
 
 
 
-
 # Variables
 
 2023-06-21
@@ -56,7 +54,6 @@ Go to `lesson1-syntax.Rmd`.
 
 
 
-
 # Packages and Functions 2023-06-28
 
 see Rmd. Nothing the week of July 4.
@@ -65,7 +62,17 @@ see Rmd. Nothing the week of July 4.
 
 # Intro Tidyverse July 12
 
+Did not attend.
+
+
+
 # Organize and Clean
+
+2023-07-19
+
+s
+
+
 
 # Visualization
 
