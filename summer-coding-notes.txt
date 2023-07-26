@@ -74,9 +74,16 @@ Tidyverse *q.v.*, and really data wrangling.
 
 
 
+
 # Visualization
 
 July 26
+
+About R projects. Can do version control.
+
+Read in data. **Today I learned** about `read_csv()` which is different (makes a tibble)!
+
+
 
 
 # TBD

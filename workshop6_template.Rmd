@@ -38,7 +38,8 @@ When I read in my data, I always start by looking at the variable names (do the 
   - `janitor::clean_names()` is my go to for automatically cleaning the variable names
   
 ```{r}
-
+X <- read.csv('womens-world-cup.csv')
+Xt <- read_csv('womens-world-cup.csv')  # note the underscore. Today I learned!
 
 ```
 
