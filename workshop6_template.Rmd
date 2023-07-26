@@ -1,0 +1,80 @@
+---
+title: "Workshop 6"
+output: html_document
+date: "2023-07-19"
+---
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+# Create R Project
+
+1. Open RStudio
+2. In the top right hand corner, click the R cube and select "New Project"
+3. Choose "New Directory" and "New Project"
+4. Enter a name for your new project 
+5. Browse the location for where you want your project to be saved
+6. Click "Create Project"
+
+# Load libraries
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(ggeasy)
+```
+
+# Research Questions
+
+[Women's World Cup Data](https://www.kaggle.com/datasets/mattop/fifa-womens-world-cup-stats?resource=download)
+
+1. Which 10 countries have the most goals? 
+2. How has the average age of women playing in the world cup changed over the years?
+
+# Read in data 
+
+When I read in my data, I always start by looking at the variable names (do the names make sense? are they easy to read? are they consistent?)
+  - `janitor::clean_names()` is my go to for automatically cleaning the variable names
+  
+```{r}
+
+
+```
+
+# Research Question 1: Which 10 countries have the most goals? 
+
+## Clean and organize data
+
+- Next, I think about my research question and decide which variables do I need 
+- And then continue organizing the data to answer my research question
+
+```{r}
+
+
+```
+
+## Visualize our results
+
+- Introducing `ggplot`!
+- Think about your data, what type of plot would make the most sense?
+
+```{r}
+
+
+```
+
+# Research Question 2: How has the average age of women playing in the world cup changed over the years?
+
+```{r}
+
+
+```
+
+## Visualize our results
+
+```{r}
+
+
+```
+

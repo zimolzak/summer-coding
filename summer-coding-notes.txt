@@ -70,13 +70,14 @@ Did not attend.
 
 2023-07-19
 
-s
+Tidyverse *q.v.*, and really data wrangling.
 
 
 
 # Visualization
 
 July 26
+
 
 # TBD
 
