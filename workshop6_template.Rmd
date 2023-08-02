@@ -23,7 +23,11 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 library(tidyverse)
 library(janitor)
 library(ggeasy)
+library(knitr)
 ```
+
+
+
 
 # Research Questions
 
@@ -41,7 +45,16 @@ When I read in my data, I always start by looking at the variable names (do the 
 X <- read.csv('womens-world-cup.csv')
 Xt <- read_csv('womens-world-cup.csv')  # note the underscore. Today I learned!
 
+wc_data_raw <- read_csv('womens-world-cup.csv') %>% 
+  clean_names()
+
+abcdefghi_abcdefghi_abcdefghi_abcdefghi_abcdefghi_abcdefghi_abcdefghi_abcdefghi_abcdefghi_abcdefghij <- 10  # hey look a 100-char var name works fine.
+
+
 ```
+
+
+
 
 # Research Question 1: Which 10 countries have the most goals? 
 
@@ -51,24 +64,98 @@ Xt <- read_csv('womens-world-cup.csv')  # note the underscore. Today I learned!
 - And then continue organizing the data to answer my research question
 
 ```{r}
+wc_data_raw %>%
+  select(squad, year, age, matches_played, goals) %>% 
+  group_by(squad) %>% 
+  summarise(total_goals = sum(goals)) %>% 
+  arrange(desc(total_goals)) %>% 
+  head(10) -> wc_goals_top10
+
+wc_goals_top10 %>% 
+  kable()
+
+```
+
+## How about the highest peak?
+
+What countries have the top number of goals in a year?
+
+```{r highest-max}
+wc_data_raw %>%
+  group_by(squad) %>% 
+  summarise(max_goals = max(goals)) %>% 
+  arrange(desc(max_goals)) %>% 
+  head(10) %>% 
+  kable()
+```
+
+```{r max-squad-and-year}
+wc_data_raw %>%
+  group_by(squad, year) %>% 
+  summarise(max_goals = max(goals)) %>% 
+  arrange(desc(max_goals)) %>% 
+  head(10) %>% 
+  kable()
+```
+
+```{r plot1}
+wc_data_raw %>%
+  group_by(squad) %>% 
+  summarise(total_goals = sum(goals)) -> wc_goals
+
+ggplot(wc_goals, aes(squad, total_goals)) +
+  geom_col()
 
 
 ```
+
+
+
+
+
+
+# August 2 session
 
 ## Visualize our results
 
 - Introducing `ggplot`!
 - Think about your data, what type of plot would make the most sense?
 
-```{r}
+```{r plot-aug2}
 
+ggplot(wc_goals_top10, aes(
+    x = fct_reorder(squad, total_goals),
+    total_goals,
+    label=total_goals
+  )) +
+  geom_col() +
+  labs(x='Squad', y='Total goals') +
+  theme_classic() +   # neat one
+  coord_flip() +
+  geom_label()
+
+# We did ggeasy too, but I didn't use any.
 
 ```
+
+
+
+## GGEasy
+
+
+
 
 # Research Question 2: How has the average age of women playing in the world cup changed over the years?
 
 ```{r}
+wc_data_raw %>%
+  mutate(sum_ages = players * age) %>%
+  select(year, players, age, sum_ages) %>%
+  group_by(year) %>%
+  summarise(players_tot = sum(players), sum_ages_tot = sum(sum_ages)) %>%
+  mutate(avg_age = sum_ages_tot / players_tot) -> avg_age
 
+avg_age %>% kable()
 
 ```
 
@@ -76,6 +163,8 @@ Xt <- read_csv('womens-world-cup.csv')  # note the underscore. Today I learned!
 
 ```{r}
 
-
+ggplot(avg_age, aes(x = year, y = avg_age)) +
+  geom_point() +
+  geom_line()
 ```
 
