@@ -167,4 +167,13 @@ ggplot(avg_age, aes(x = year, y = avg_age)) +
   geom_point() +
   geom_line()
 ```
+```{r stack-facet-histo} 
+
+ggplot(wc_data_raw, aes(age)) +
+    geom_boxplot(aes(weight = players)) +
+  coord_flip() +
+  facet_grid(cols=vars(year)) +
+  easy_remove_x_axis() +
+  easy_remove_x_gridlines() 
+```
 
